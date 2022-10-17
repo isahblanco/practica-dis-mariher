@@ -1,0 +1,30 @@
+--Inserts CU Indentificarse 
+
+--Empleado activo(contratado y trabajando) Gerente de Ventas. Secuencia principal
+INSERT INTO USUARIO VALUES ('11122233B', 'Empleado Activo Gerente', 'C/Azafran Nº1', 'empleado.activo@modelpc.com', '654321001');
+INSERT INTO EMPLEADO VALUES ('11122233B', '11122233B', '2012-01-01');
+INSERT INTO ROLESENEMPRESA VALUES ('2012-01-01', '11122233B', 2);
+INSERT INTO VINCULACIONCONLAEMPRESA VALUES ('2012-01-01', '11122233B', 1);
+INSERT INTO DISPONIBILIDADEMPLEADO VALUES ('2012-01-01', null, '11122233B', 3);
+
+-- Empleado inactivo. Alternativa 2c 
+INSERT INTO USUARIO VALUES ('11223344C', 'Empleado inactivo', 'C/Azulona Nº2', 'empleado.inactivo@modelpc.com', '654321002');
+INSERT INTO EMPLEADO VALUES ('11223344C', '11223344B', '2010-01-01');
+INSERT INTO ROLESENEMPRESA VALUES ('2010-01-01','11223344B', 2);
+INSERT INTO VINCULACIONCONLAEMPRESA VALUES ('2010-01-01','11223344B', 1);
+INSERT INTO VINCULACIONCONLAEMPRESA VALUES ('2010-01-02','11223344B', 2);
+INSERT INTO DISPONIBILIDADEMPLEADO VALUES ('2010-01-01', null, '11223344B', 3);
+
+--Inserts CU Registrar Pedido de Cliente
+
+--Cliente
+INSERT INTO Usuario VALUES ('98765432B', 'Cliente de prueba', 'C/ Canela 1', 'cliente.caso.adicional@gmail.com', '987654321');
+INSERT INTO Empresa VALUES ('98765432B', true, false);
+
+--Configuraciones
+INSERT INTO ConfiguracionPC VALUES (1, 1, 100, 100, 100, 100, 100);
+INSERT INTO ConfiguracionPC VALUES (2, 1, 70, 100, 100, 100, 50);
+INSERT INTO ConfiguracionPC VALUES (3, 2, 200, 100, 100, 100, 100);
+INSERT INTO ConfiguracionPC VALUES (4, 2, 150, 100, 100, 100, 60);
+INSERT INTO ConfiguracionPC VALUES (5, 2, 220, 100, 100, 100, 100);
+
